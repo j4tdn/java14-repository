@@ -1,14 +1,16 @@
 package condition;
 
+import java.util.Scanner;
+
 public class Pair {
 	public static void main(String[] args) {
 		int first = 8;
 		int second = 18;
 		int third = 15;
 		
-		//max, min, mid
-		int max= Integer.MIN_VALUE;
-		int min= Integer.MAX_VALUE;
+		int max, min, mid;
+		int min= Integer.MIN_VALUE;
+		int max= Integer.MAX_VALUE;
 		if (first > second) {
 			max = first;
 		} else {
@@ -24,8 +26,7 @@ public class Pair {
 		System.out.println("max: " + max);
 		System.out.println("min: " + min);
 		}
-	
+
 	private static Pair getMinMax (int first, int second, int third) {
-		
-	}
-}
+		\
+}}
