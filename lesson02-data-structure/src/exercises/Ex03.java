@@ -54,7 +54,7 @@ public class Ex03 {
 		return false;
 	}
 
-	// TODO: Lesson06-Exception
+	// TODO: Lesson06-Exception >>>>
 	private static void sleep(long milliseconds) {
 		try {
 			TimeUnit.MILLISECONDS.sleep(milliseconds);
