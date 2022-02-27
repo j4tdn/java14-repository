@@ -1,0 +1,21 @@
+package view;
+
+import bean.Car;
+
+public class Ex02 {
+	public static void main(String[] args) {
+		Car c1= new Car("Car 1","Red");
+		Car c2= new Car("Car 2","Black");
+		Car c3= new Car("Car 3","Blue");
+		
+		System.out.println(c1);
+		System.out.println(c2);
+		System.out.println(c3);
+		Car.model="Vni";
+		System.out.println("--------------------------------------");
+		System.out.println(c1);
+		System.out.println(c2);
+		System.out.println(c3);
+	}
+	
+}
