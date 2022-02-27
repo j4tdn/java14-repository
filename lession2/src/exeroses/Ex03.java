@@ -25,6 +25,7 @@ public class Ex03 {
 			if(contains(generatedPassword,text,i)) {
 				continue;
 			}
+			// đưa vào mảng
 			generatedPassword[i++] = text;
 			
 			System.out.print(text + "  ");
@@ -39,10 +40,10 @@ public class Ex03 {
 		System.out.println("Passwork : " + text);
 	}
 	private static boolean contains(String[] generatedPasswords, String text, int nonNullElements) {
-		// for-index, for each
-		for(int i=0; i<nonNullElements; i++) {
-			String generatedPasswork = generatedPasswords[i];
-			if(generatedPasswords.equals(text)) {
+		// for-index, for-each
+		for (int i = 0; i < nonNullElements; i++) {
+			String generatedPassword = generatedPasswords[i];
+			if (generatedPassword.equals(text)) {
 				return true;
 			}
 		}
