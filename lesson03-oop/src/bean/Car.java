@@ -2,6 +2,8 @@ package bean;
 
 // Lombok
 public class Car {
+	// static, non
+	// private, non
 	
 	public static String model;
 	

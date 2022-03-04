@@ -1,0 +1,17 @@
+Customer: name, phone, gender, address
+Item: id, name, color, price
+
+--> Initial Shop Data
+Item[] items = {....}
+
+--> Initial Customer Data
+Customer[] customers = {....}
+
+--> ItemDetail: item, quantity
+
+Order
++ Customer
++ ItemDetail[]
++ DateTime
+
+==> shopping(Order)
