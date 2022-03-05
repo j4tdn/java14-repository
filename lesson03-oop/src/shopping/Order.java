@@ -7,6 +7,7 @@ public class Order {
 	private Customer customer;
 	private ItemDetail[] itemDetails;
 	private LocalDateTime dateCreated;
+	private double totalOfMoney;
 
 	public Order() {
 
@@ -40,6 +41,12 @@ public class Order {
 
 	public void setDateCreated(LocalDateTime dateCreated) {
 		this.dateCreated = dateCreated;
+	}
+	public double getTotalOfMoney() {
+		return totalOfMoney;
+	}
+	public void setTotalOfMoney(double totalOfMoney) {
+		this.totalOfMoney = totalOfMoney;
 	}
 
 	@Override

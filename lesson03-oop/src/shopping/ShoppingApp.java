@@ -11,9 +11,11 @@ public class ShoppingApp {
 
 		// B2: Do shopping
 		Order[] orders = DataModel.createOrders(items, customers);
+		
 
 		// B3: Do calculation
-
+		doCalculation(orders);
+		System.out.println(orders);
 	}
 
 	private static void doCalculation(Order[] orders) {
