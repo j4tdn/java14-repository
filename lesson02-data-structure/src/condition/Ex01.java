@@ -1,12 +1,21 @@
 package condition;
 
+/**
+ * Cho ba số nguyên a, b, c. Viết chương trình tìm số lớn nhất, nhỏ nhất và số
+ * còn lại
+ */
 public class Ex01 {
-
 	public static void main(String[] args) {
-		int first = 8;
-		int second  =18;
-		int third = 15;
-		//max, min , mid 
+		int first = 1;
+		int second = 18;
+		int third = 5;
+		Pair pair = getMinMax(first, second, third);
+
+		System.out.println("max: " + pair.max);
+		System.out.println("min: " + pair.min);
+	}
+
+	private static Pair getMinMax(int first, int second, int third) {
 		int max = Integer.MIN_VALUE;
 		int min = Integer.MAX_VALUE;
 		if (first > second) {
@@ -22,7 +31,6 @@ public class Ex01 {
 		if (min > third) {
 			min = third;
 		}
-		System.out.println("max = " + max);
-		System.out.println("min = " + min);
+		return new Pair(min, max);
 	}
 }
