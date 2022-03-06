@@ -1,5 +1,5 @@
 Customer: name, phone, gender, address
-Item: id, name, color, price
+Item: id, name, color, price, itemgroup
 
 --> Initial Shop Data
 Item[] items = {....}
@@ -15,3 +15,8 @@ Order
 + DateTime
 
 ==> shopping(Order)
+
+===> Loại Hàng ===> ItemGroup
+===> Tìm những mặt hàng có giá bán lớn hơn 20000 trong loại hàng điện thoại
+
+==> ItemGroup: id, name, Item[]
