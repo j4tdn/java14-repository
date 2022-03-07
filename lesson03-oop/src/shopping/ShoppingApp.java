@@ -2,7 +2,8 @@ package shopping;
 
 import static shopping.DataModel.*;
 
-import java.util.Arrays;
+import java.time.LocalDate;
+//import java.util.Arrays;
 
 public class ShoppingApp {
 
@@ -19,26 +20,21 @@ public class ShoppingApp {
 		Order[] orders = createOrders(items, customers);
 
 		// B3
-		doCalculation(orders);
-		System.out.println(Arrays.toString(orders));
-	}
-
-	private static void doCalculation(Order[] orders) {
-		double sum = 0;
-		for (Order order : orders) {
-			ItemDetail[] itemDetails = order.getItemDetail();
-			if (itemDetails.length > 0) {
-				double totalOfMoney = 0;
-				for (ItemDetail itemDetail : itemDetails) {
-					Item item = itemDetail.getItem();
-					int quantity = itemDetail.getQuantity();
-					totalOfMoney += item.getPrice() * quantity;
+		//LocalDate promotionDate = LocalDate.of(2022, 5, 5);
+		ShoppingUtils.export(orders, LocalDate.of(2022, 5, 5));
+		
+		
+		ItemGroup[] itemGroups = initialItemGroups(items);
+		
+		for(ItemGroup itemGroup: itemGroups) {
+			if(itemGroup.getName().equals("Phone")) {
+				Item[] items2 = itemGroup.getItems();
+				for(Item item: items2) {
+					if(item.getPrice()>21000) {
+					System.out.println(item);}
 				}
-				order.setTotalOfMoney(totalOfMoney);
 			}
-			sum += order.getTotalOfMoney();
 		}
-		System.out.println("Total charge of shopping: " + sum);
 	}
 
 }

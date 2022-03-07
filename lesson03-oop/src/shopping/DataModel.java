@@ -12,8 +12,16 @@ public class DataModel {
 
 		ItemDetail[] secondItemDetails = { new ItemDetail(items[2], 2), new ItemDetail(items[3], 3) };
 
-		return new Order[] { new Order(customers[0], firstItemDetails, LocalDateTime.now()),
+		return new Order[] { new Order(customers[0], firstItemDetails, LocalDateTime.of(2022, 5, 5, 10, 20)),
 				new Order(customers[1], secondItemDetails, LocalDateTime.now()) };
+	}
+	
+	public static ItemGroup[] initialItemGroups(Item[] items) {
+		return new ItemGroup[] {
+				new ItemGroup("123", "Phone", new Item[] {items[0], items[1]}),
+				new ItemGroup("234", "Fridge", new Item[] {items[2]}),
+				new ItemGroup("345", "Electric Fan", new Item[] {items[3], items[4]})
+		};
 	}
 
 	public static Item[] initialItems() {

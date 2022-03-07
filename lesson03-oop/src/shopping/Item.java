@@ -5,6 +5,7 @@ public class Item {
 	private String name;
 	private String color;
 	private double price;
+	private ItemGroup itemGroup;
 	
 	public Item() {
 	}
@@ -15,6 +16,19 @@ public class Item {
 		this.name = name;
 		this.color = color;
 		this.price = price;
+	}
+
+	
+	
+	
+
+	public Item(String id, String name, String color, double price, ItemGroup itemGroup) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.color = color;
+		this.price = price;
+		this.itemGroup = itemGroup;
 	}
 
 	public String getId() {
@@ -47,6 +61,16 @@ public class Item {
 
 	public void setPrice(double price) {
 		this.price = price;
+	}
+	
+	
+
+	public ItemGroup getItemGroup() {
+		return itemGroup;
+	}
+
+	public void setItemGroup(ItemGroup itemGroup) {
+		this.itemGroup = itemGroup;
 	}
 
 	@Override
