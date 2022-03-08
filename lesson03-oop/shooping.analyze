@@ -15,3 +15,7 @@ Order
 +DateTime
 
 ->shopping(Order) =>>
+
+
+-> ItemGroup
+-> find item have price than 20000 trong Phone

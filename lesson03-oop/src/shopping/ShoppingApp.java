@@ -1,37 +1,36 @@
 package shopping;
 
-import java.time.LocalDateTime;
-import java.util.Arrays;
+import static shopping.DataModel.createOrder;
+import static shopping.DataModel.initialCustomers;
+import static shopping.DataModel.initialItem;
+import static shopping.DataModel.initialItemGroups;
 
-import static shopping.DataModel.*;
+import java.time.LocalDate;
 
 public class ShoppingApp {
 	public static void main(String[] args) {
 		
-		Item[]items=initialItems();
-		Customer[]customers= initialCustomers();
-		Order[]orders= createOrder(items, customers);
+		Item[] items = initialItem();
+		// find Items in "Phone" group Which have price greater than 20000
+		ItemGroup[] itemGroups=initialItemGroups(items);
 		
-		doCalculate(orders);
+		Customer[] customers = initialCustomers();
+		Order[] orders = createOrder(items, customers);
+
+		ShoppingUtils.export(orders, LocalDate.of(2022, 5, 5));
 		
-		System.out.println(Arrays.toString(orders));
-		
-		// do calculation
-		
-		
-		
-	}
-	private static void doCalculate(Order[] orders) {
-		for(Order order:orders) {
-			ItemDetail [] itemDetails= order.getItemDetails();
-			double totalOfMoney=0;
-			for(ItemDetail itemDetail:itemDetails) {
-				Item item= itemDetail.getItem();
-				totalOfMoney+=item.getPrice()*itemDetail.getQuantity();
+		for(ItemGroup itemGroup:itemGroups) {
+			if(itemGroup.getName().equals("Phone")) {
+				Item[] currentItems= itemGroup.getItems();
+				for(Item item:currentItems) {
+					if(item.getPrice()>20000) {
+						System.out.println(item);
+					}
+				}
 			}
-			order.setTotalOfMoney(totalOfMoney);
 		}
+
 	}
 	
-	
+
 }

@@ -5,7 +5,16 @@ public class Item {
 	private String name;
 	private String color;
 	private Double price;
+	private ItemGroup itemGroup;
 	public Item() {
+	}
+	public Item(String id, String name, String color, Double price, ItemGroup itemGroup) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.color = color;
+		this.price = price;
+		this.itemGroup=itemGroup;
 	}
 	public Item(String id, String name, String color, Double price) {
 		super();
@@ -13,6 +22,7 @@ public class Item {
 		this.name = name;
 		this.color = color;
 		this.price = price;
+		
 	}
 	public String getId() {
 		return id;
@@ -37,6 +47,12 @@ public class Item {
 	}
 	public void setPrice(Double price) {
 		this.price = price;
+	}
+	public ItemGroup getItemGroup() {
+		return itemGroup;
+	}
+	public void setItemGroup(ItemGroup itemGroup) {
+		this.itemGroup = itemGroup;
 	}
 	@Override
 	public String toString() {
