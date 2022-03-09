@@ -15,7 +15,7 @@ public class Ex02 {
 		int k = 0;
 		while (true) {
 			if(k==10) {
-				//Dừng, thoát khỏi vòng while;
+				//thoát khỏi vòng lặp.
 				break;
 			}
 			

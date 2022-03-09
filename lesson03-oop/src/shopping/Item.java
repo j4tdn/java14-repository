@@ -5,6 +5,7 @@ public class Item {
 	private String name;
 	private String color;
 	private double price;
+	private ItemGroup itemGroup;
 	
 	public Item() {
 	}
@@ -48,6 +49,14 @@ public class Item {
 		this.price = price;
 	}
 
+	public ItemGroup getItemGroup() {
+		return itemGroup;
+	}
+	
+	public void setItemGroup(ItemGroup itemGroup) {
+		this.itemGroup = itemGroup;
+	}
+	
 	@Override
 	public String toString() {
 		return "Item [id=" + id + ", name=" + name + ", color=" + color + ", price=" + price + "]";

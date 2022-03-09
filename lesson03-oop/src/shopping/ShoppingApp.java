@@ -2,39 +2,43 @@ package shopping;
 
 import static shopping.DataModel.*;
 
+import java.time.LocalDate;
 import java.util.Arrays;
 
 public class ShoppingApp {
 	public static void main(String[] args) {
-		
-		//B1: Initial Item,Customer Data
+
+		// B1: Initial Item,Customer Data
 		Item[] items = initItems();
 		Customer[] customers = initialCustomers();
-		
-		//B2 : Do Shopping
+
+		// B2 : Do Shopping
 		Order[] orders = createOrders(items, customers);
 		
-		//B3 : Xuat Don Hang
-		doCalMoneyOrder(orders);
-		System.out.print(Arrays.toString(orders));
 		
+
+		// B3 : Do calculation and Export bill
+		ShoppingUtil.export(orders, LocalDate.of(2022, 5, 5));
 		
-	}
-	//tinh tong tien so luong item
-	private static void doCalMoneyOrder(Order[] orders) {
-		//lay so luong cac item
-		for(Order order:orders) {
-			ItemDetail[] itemDetails = order.getItemDetails();
-			double totalMoney=0;
-			//tinh so tien tung item
-			for(ItemDetail itemDetail : itemDetails) {
-				Item item = itemDetail.getItem();
-				totalMoney+= (item.getPrice()*itemDetail.getQuantity());
+		//inittial itemGroups && Find items in "phone" group which have price greater than 2000
+		ItemGroup[] itemGroups = initialItemGroup(items);
+		for(ItemGroup itemGroup : itemGroups) {
+			String nameItemGroup = itemGroup.getName();
+			if(nameItemGroup.equals("phone")) {
+				Item[] curentItems = itemGroup.getItem();
+				for(Item item : curentItems) {
+					if(item.getPrice() > 20000) {
+						System.out.println(item);
+					}
+				}
 			}
-			
-			order.setTotalMoney(totalMoney);
 		}
+		
+//		Item[] curentItems = ShoppingUtil.findItems(itemGroups,20000,"iphone");
+//		System.out.println(Arrays.toString(curentItems));
+
 	}
+
 	
 
 }

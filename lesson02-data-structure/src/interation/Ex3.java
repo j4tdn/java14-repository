@@ -15,7 +15,7 @@ public class Ex3 {
 		int k = 0;
 		do {
 			if(k==10) {
-				//Dừng, thoát khỏi vòng while;
+				//thoát khỏi vòng while
 				break;
 			}
 			

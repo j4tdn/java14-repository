@@ -20,7 +20,7 @@ public class DataModel {
 		
 		
 		return new Order[]{
-				new Order(customers[0], firstItemDetails, LocalDateTime.now()),
+				new Order(customers[0], firstItemDetails, LocalDateTime.of(2022, 5, 5, 16, 10)),
 				new Order(customers[1], secondItemDetails, LocalDateTime.now())
 		};
 	}
@@ -38,6 +38,17 @@ public class DataModel {
 		return new Customer[] {
 			new Customer("John", "034945945", true, "Milan"),
 			new Customer("Susan", "03232323", false, "Kiev")
+		};
+	}
+	
+	
+	public static ItemGroup[] initialItemGroup(Item[] items) {
+		
+		return new ItemGroup[] {
+				new ItemGroup(1, "phone", new Item[] {items[0],items[1]}),
+				new ItemGroup(2, "Fridge", new Item[] {items[2]}),
+				new ItemGroup(3, "Electric Fan", new Item[] {items[3]})
+				
 		};
 	}
 	

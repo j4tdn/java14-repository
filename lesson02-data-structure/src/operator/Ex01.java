@@ -13,7 +13,7 @@ public class Ex01 {
 		
 	}
 	
-	// KIểm tra 1 số co phải là bội của 3 hay không
+	// Kiểm tra 1 số xem có phải là bội của 3 hay không.
 	private static boolean isPowerOf(int number) {
 		return number %3 == 0;
 	}
