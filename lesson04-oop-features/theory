@@ -1,0 +1,26 @@
+1. Encapsulation - Tính chất đóng gói
+---> Tính chất đóng gói được thể hiện qua access modifier. Nếu thuộc tính, phương thức là
++ private  : đóng gói trong phạm vi class
++ public   : đóng gói trong phạm vi project, gọi ở đâu cũng được
++ protected: đóng gói trong phạm vi của package 
+             lớp con bên ngoài package có thể thừa kế được
++          : đóng gói trong phạm vi của package
+
+2. Polymorphism - Tính chất đa hình
+---> Đa hình trong phương thức: có nghĩa là một phương thức(1 tên) nhưng có thể
+xử lý nhiều chức năng, nhiều thể hiện
+VD: Phương thức tìm tổng ==> sum
++ sum(int, int)
++ sum(float, float)
++ sum(int, int, int)
+-- CODE: 
+Overloading:
+Overriding: 
+
+---> Đa hình trong đối tượng: có nghĩa là 1 đối tượng tùy từng thời điểm nó sẽ
+có những thể hiện phù hợp, linh hoạt, lúc là đối tượng này, lúc là đối tượng kia
+VD: Đối tượng con người tùy thời điểm có thể
++ Học Sinh
++ Sinh Viên
++ Người đi làm
++ Thành viên trong gia đình 
