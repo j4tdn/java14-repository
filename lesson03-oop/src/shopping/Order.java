@@ -5,16 +5,16 @@ import java.util.Arrays;
 
 public class Order {
 	private Customer customer;
-	private ItemDetail[] itemDetail;
+	private ItemDetail[] itemDetails;
 	private LocalDateTime dateCreated;
 	private double totalOfMoney;
-	
+
 	public Order() {
 	}
 
-	public Order(Customer customer, ItemDetail[] itemDetail, LocalDateTime dateCreated) {
+	public Order(Customer customer, ItemDetail[] itemDetails, LocalDateTime dateCreated) {
 		this.customer = customer;
-		this.itemDetail = itemDetail;
+		this.itemDetails = itemDetails;
 		this.dateCreated = dateCreated;
 	}
 
@@ -26,12 +26,12 @@ public class Order {
 		this.customer = customer;
 	}
 
-	public ItemDetail[] getItemDetail() {
-		return itemDetail;
+	public ItemDetail[] getItemDetails() {
+		return itemDetails;
 	}
 
-	public void setItemDetail(ItemDetail[] itemDetail) {
-		this.itemDetail = itemDetail;
+	public void setItemDetails(ItemDetail[] itemDetails) {
+		this.itemDetails = itemDetails;
 	}
 
 	public LocalDateTime getDateCreated() {
@@ -42,8 +42,6 @@ public class Order {
 		this.dateCreated = dateCreated;
 	}
 
-	
-	
 	public double getTotalOfMoney() {
 		return totalOfMoney;
 	}
@@ -54,9 +52,8 @@ public class Order {
 
 	@Override
 	public String toString() {
-		return "ORDER: Customer = " + customer +"\nItem Detail =" + Arrays.toString(itemDetail) + "\nDate Created = "
+		return "Order [customer=" + customer + ", itemDetails=" + Arrays.toString(itemDetails) + ", dateCreated="
 				+ dateCreated + "]";
 	}
-	
-	
+
 }

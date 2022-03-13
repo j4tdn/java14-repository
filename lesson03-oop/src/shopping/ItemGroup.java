@@ -1,24 +1,26 @@
 package shopping;
 
+import java.util.Arrays;
+
 public class ItemGroup {
-	private String id;
+	private int id;
 	private String name;
 	private Item[] items;
 	
 	public ItemGroup() {
 	}
 
-	public ItemGroup(String id, String name, Item[] items) {
+	public ItemGroup(int id, String name, Item[] items) {
 		this.id = id;
 		this.name = name;
 		this.items = items;
 	}
 
-	public String getId() {
+	public int getId() {
 		return id;
 	}
 
-	public void setId(String id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 
@@ -36,6 +38,11 @@ public class ItemGroup {
 
 	public void setItems(Item[] items) {
 		this.items = items;
+	}
+
+	@Override
+	public String toString() {
+		return "ItemGroup [id=" + id + ", name=" + name + ", items=" + Arrays.toString(items) + "]";
 	}
 
 	
