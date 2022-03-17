@@ -8,9 +8,9 @@ package structure;
  * + Hàm khởi tạo mặc định thì có access modifier là private
  */
 public enum CirclePos {
-	// CirclePos INSIDE = new CirclePos("Trong đường tròn");
-	// CirclePos ONSIDE = new CirclePos("Trên đường tròn");
-	// CirclePos OUTNSIDE = new CirclePos("Ngoài đường tròn");
+//	 CirclePos INSIDE = new CirclePos("Trong đường tròn");
+//	 CirclePos ONSIDE = new CirclePos("Trên đường tròn");
+//	 CirclePos OUTNSIDE = new CirclePos("Ngoài đường tròn");
 	INSIDE("Trong đường tròn"), ONSIDE("Trên đường tròn"), OUTSIDE("Ngoài đường tròn");
 
 	public String value;
