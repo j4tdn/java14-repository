@@ -26,5 +26,53 @@ VD: Đối tượng con người tùy thời điểm có thể
 + Người đi làm
 + Thành viên trong gia đình
 
+3. Inheritance - Tính chất thừa kế
+Methods In ...
++ Class         : declaration and body(normal method) ==> void sum(){}
++ Interface     : declaration(abstract method)        ==> void sum()
++ Abstract Class: normal method ==> void sum(){} and abstract method ==> abstract void sum()      
 
- 
+
++ Class extends Class
+  . class's method consist of declaration, body
+  . Need to override method ? - Optional
+
++ Class extends AbstractClass
+  . Need to override abstract-class's methods
+     + Parent methods are abstract method: Required
+     +                    normal method: Optional
+     
++ Abstract Class implements Interface
+  . Need to override interface's methods ==> optional
+    + If not override ==> interface's methods becomes abstract method in abstract class
+    
+==> Cho ví dụ thực tế
+
++ Class implements Interface
+  . interface's method consist of declaration --> abstract method(method without body)
+  . Need to override method ? - Required
+  
++ InterfaceA(2) extends InterfaceB(3)
+  . InterfaceA will contains 5 abstract methods
+  . Class implements InterfaceA
+    . Require override 5 methods from InterfaceA  
+    
++ Class both extends class(ONE) and|or implement interface(ONE to MANY) ? 
++ Multiple Inheritance: NO --> cannot extends more than ONE class
+  . Father: #coding ==> C, JAVA 
+  . Mother: #coding ==> HTML, CSS
+  . Son   : extends Father(x), Mother(x) ==> no require to override parent's method
+    ==> Use coding from Father or Mother
+    ==> Son son = new Son();
+        son.coding(); ==> select from father || mother
+  
+  . Interface: Father, Mother
+  . Class: Son implements Father, Mother
+         : override
+         ==> Đa thực thi
+         
++ Phân biệt Interface và Abstract Class
+   + <= JDK1.7
+   + >= JDK1.8
++ Từ version 1.8, Interface có thể chưa hàm trừu tượng và hàm bình thường giống Abstract Class
+  thì việc đó có thừa không và mục đích để làm gì với static, default, private method trong interface         
