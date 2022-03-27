@@ -7,6 +7,7 @@ public class Car {
 	
 	private String serial;
 	private String color;
+	private double price;
 
 	public Car() {
 		
@@ -14,6 +15,24 @@ public class Car {
 	public Car(String serial, String color) {
 		this.serial = serial;
 		this.color = color;
+	}
+	public Car(String serial, String color, double price) {
+		this.serial = serial;
+		this.color = color;
+		this.price = price;
+	}
+	
+	public static String getModel() {
+		return model;
+	}
+	public static void setModel(String model) {
+		Car.model = model;
+	}
+	public double getPrice() {
+		return price;
+	}
+	public void setPrice(double price) {
+		this.price = price;
 	}
 	public String getSerial() {
 		return serial;
@@ -30,6 +49,6 @@ public class Car {
 	
 	@Override
 	public String toString() {
-		return  serial + ", " + color + ", " + model;
+		return  serial + ", " + color + ", " + model + ", " + price;
 	}
 }
