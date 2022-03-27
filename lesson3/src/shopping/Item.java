@@ -3,7 +3,7 @@ package shopping;
 public class Item {
 	private String id,name,color;
 	private double price;
-	
+	private ItemGroup[] itemGroup;
 	public Item() {
 		
 	}
@@ -46,6 +46,14 @@ public class Item {
 
 	public void setPrice(double price) {
 		this.price = price;
+	}
+	
+	public ItemGroup[] getItemGroup() {
+		return itemGroup;
+	}
+
+	public void setItemGroup(ItemGroup[] itemGroup) {
+		this.itemGroup = itemGroup;
 	}
 
 	@Override
