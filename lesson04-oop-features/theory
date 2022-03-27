@@ -4,7 +4,7 @@
 + public   : đóng gói trong phạm vi project, gọi ở đâu cũng được
 + protected: đóng gói trong phạm vi của package 
              lớp con bên ngoài package có thể thừa kế được
-+          : đóng gói trong phạm vi của package
++ default : đóng gói trong phạm vi của package
 
 2. Polymorphism - Tính chất đa hình
 ---> Đa hình trong phương thức: có nghĩa là một phương thức(1 tên) nhưng có thể
@@ -24,3 +24,42 @@ VD: Đối tượng con người tùy thời điểm có thể
 + Sinh Viên
 + Người đi làm
 + Thành viên trong gia đình 
+
+3. Inheritance - Tính chất thừa kế
+Method In....
++ Class   		: declaration and body (normal method)  ==> void sum(){}
++ Interface		: declaration (abstract method)			==> void sum()
++ Abstract Class: normal method ==> void sum(){} and abstract method ==> abstract void sum()
+
+
++ Class extend Class
+ . class's method consist of declaration body
+ . Need to Override method ? - Optional
+ 
++Class extends AbstractClass
+ . Need to override abstract-class's methods 
+  	+ Parent methods are abstract method: Required
+  						 normal method: Optional
+ 
++ Class implement Interface 
+ . interface's method consist of declaration --> abstract method (method without body)
+ . Need to Override method ? - Required
+ 
++ InterfaceA(2) extend InterfaceB(3)
+ . Interface will contains 5 abstract methods
+ . Class implement InterfaceA
+ . Require override 5  methods from InterfaceA
+ 
++ Class both extends class(ONE) and|or implement interface(ONE to MANY)?
++ Multiple Inheritance: NO --> cannot extends more than ONE class 
+ . Father: #coding ==> C,JAVA
+ . Mother: #coding ==> HTML, CSS
+ . Son	 : extends Father(x) , Mother(x) ==> no require to override parent's method
+  ==> Use coding from Father or Mother
+  ==> Son son = new Son();
+  	  son.coding(); ==> select from father || mother
+  
+ . Inheritance: Father, Mother
+ . Class: Son implements Father, Mother
+ 		: override
+ 		==> Đa thực thi 
