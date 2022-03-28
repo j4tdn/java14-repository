@@ -6,6 +6,7 @@ public class App04 {
 	public static void main(String[] args) {
 		int [] numbers= {3, 15, 21, 0, 15, 17, 21};
 		int[]rs=uniqueNumber(numbers);
+		sort(rs);
 		System.out.println(Arrays.toString(rs));
 	}
 	public static int[] uniqueNumber(int []arr) {
