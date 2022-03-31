@@ -8,8 +8,8 @@ public class ShoppingApp {
 	public static void main(String[] args) {
 		// B1: Initial Customer Data
 
-		Item[] items = initialItem();
-		Customer[] customers = initialCustomer();
+		Item[] items = initialItems();
+		Customer[] customers = initialCustomers();
 
 		// B2: Do shopping
 		Order[] orders = DataModel.createOrders(items, customers);
