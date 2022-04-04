@@ -6,10 +6,11 @@ public class App04 {
 	public static void main(String[] args) {
 		int [] numbers= {3, 15, 21, 0, 15, 17, 21};
 		int[]rs=uniqueNumber(numbers);
-		sort(rs);
+		
 		System.out.println(Arrays.toString(rs));
 	}
 	public static int[] uniqueNumber(int []arr) {
+		
 		int []rs= new int[arr.length];
 		int c=0;
 		for(int i=0;i<arr.length;i++) {
@@ -32,11 +33,12 @@ public class App04 {
 		}
 	}
 	public static boolean isExist(int []arr,int a) {
+		int c=0;
 		for(int i=0;i<arr.length;i++) {
 			if(arr[i]==a) {
-				return true;
+				c++;
 			}
 		}
-		return false;
+		return c>1?true:false;
 	}
 }

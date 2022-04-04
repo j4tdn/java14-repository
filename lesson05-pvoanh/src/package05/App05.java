@@ -21,9 +21,9 @@ public class App05 {
 		Book[] rs= new Book[books.length];
 		int c=0;
 		for(Book book:books) {
-			if(book.getPushlisher().equals("Nhi Đồng")) {
+		//	if(book.getPushlisher().equals("Nhi Đồng")) {
 				rs[c++]=book;
-			}
+		//	}
 		}
 		return Arrays.copyOfRange(rs,0,c);
 	}
