@@ -73,6 +73,34 @@ Methods In ...
          
 + Phân biệt Interface và Abstract Class
    + <= JDK1.7
+   ==> Interface: chỉ chứa hàm trừu tượng
+                  1 class có thể implements từ nhiều interface
+   ==> Abstract class: chứa hàm trừu tượng và hàm với body
+                  1 class chỉ có thể extends từ 1 class
+   
+   
    + >= JDK1.8
-+ Từ version 1.8, Interface có thể chưa hàm trừu tượng và hàm bình thường giống Abstract Class
-  thì việc đó có thừa không và mục đích để làm gì với static, default, private method trong interface         
+   
+   ==> Interface: chứa hàm trừu tượng và hàm với body với từ khóa default, static và private trong Java09
+                  1 class có thể implements từ nhiều interface
+   ==> Abstract class: chứa hàm trừu tượng và hàm với body
+   				  1 class chỉ có thể extends từ 1 class
+   				  
+   *** Từ version 1.8, Interface có thể chứa hàm trừu tượng và hàm bình thường giống Abstract Class
+       thì việc đó có thừa không và mục đích để làm gì với static, default, private method trong interface
+       
+       JAVA07 problems
+       ...................
+       Interface: List: forEach, sort, iterate, add, remove, get, set ==>> hàm sẽ có nội dung
+       Implementation classes: ArrayList, LinkedList, Stack, Queue, Vector
+       
+       JAVA08 >>> mở rộng bổ sung thêm các hàm cho interface List
+              >>> removeIf(condition), filter(condition)
+              ==> All implementation classes will override removeIf function with the same code
+                  >> removeIf don't care about data structure
+                  >> Increasing amount of code
+                  
+                  + Giảm lượng code sinh ra từ lớp thực thi trùng nhau khi mình thêm 1 phương thức chung vào interface
+                  + Idea của java designer, giảm lượng code thay đổi khi relase 1 version
+  
+           
