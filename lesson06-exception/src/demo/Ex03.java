@@ -15,7 +15,7 @@ public class Ex03 {
 			at demo.Ex03.printf(Ex03.java:14)
 			at demo.Ex03.main(Ex03.java:9)
 		 */
-		for (int i = 1; i <= elements.length; i++) {
+		for (int i = 0; i < elements.length; i++) {
 			System.out.println(elements[i]);
 		}
 	}

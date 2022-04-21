@@ -33,11 +33,14 @@ public class Ex02Handler03ThrowThrows {
 			System.out.println("Log error: " + e.getMessage());
 		}
 		
+		// best practice --> try catch
+		divide(a, b);
 	}
 	
 	// Hàm --> có thể được gọi từ nhiều nơi
 	// Mỗi nơi sẽ truyền giá trị của tham số khác nhau
-	private static int divide(int a, int b) {
+	// throws RuntimeException là thừa --> Vì có throw hay không cũng ko bắt buộc try catch bên ngoài
+	private static int divide(int a, int b) /*no need*/ {
 		// Thường mình sẽ sử dụng throw, throws với hàm có khả năng bị ngoại lệ
 		// Vì hàm có khả năng = chưa chắc đã xảy ra ngoại lệ cho nên mình sẽ không xử lý(try/catch) ngoại lệ trực tiếp trong hàm này
 		// Mà sẽ ném đi chỗ khác (chỗ nào mà đang gọi nó)

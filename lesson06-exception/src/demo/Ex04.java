@@ -1,5 +1,7 @@
 package demo;
 
+import java.util.Optional;
+
 import bean.Item;
 
 /**
@@ -7,18 +9,27 @@ import bean.Item;
  */
 public class Ex04 {
 	public static void main(String[] args) {
-		Item item = findItemById(25);
-		System.out.println("Current Item: " + item);
-		
+		Optional<Item> optItem = findItemById(2);
 		/*
 			Exception in thread "main" java.lang.NullPointerException
 			at demo.Ex04.main(Ex04.java:13)
 		 */
-		item.setName("Special Item");
-		System.out.println("After Updated: " + item);
+		// JAVA08: Optional<T>
+		
+		if (optItem.isPresent()) {
+			Item item = optItem.get();
+			System.out.println("Current Item: " + item);
+			item.setName("Special Item");
+			System.out.println("After Updated: " + item);
+		} else {
+			System.out.println("Empty item");
+		}
 	}
 	
-	private static Item findItemById(int itemId) {
+	// null, non-null --> Optional<Item>
+	// Optional: 100% non-null
+	// T: null, non-null
+	private static Optional<Item> findItemById(int itemId) {
 		Item found = null;
 		Item[] items = findAll();
 		for (Item item: items) {
@@ -27,7 +38,7 @@ public class Ex04 {
 				break;
 			}
 		}
-		return found;
+		return Optional.ofNullable(found);
 	}
 	
 	/**
