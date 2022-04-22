@@ -1,5 +1,7 @@
 package demo;
 
+import java.util.Optional;
+
 import bean.Item;
 
 /**
@@ -13,11 +15,16 @@ public class Ex04 {
 		 * Exception in thread "main" java.lang.NullPointerException: Cannot invoke "bean.Item.setName(String)" because "item" is null
 			at demo.Ex04.main(Ex04.java:13)
 		 */
-		Item item= findItemById(27);
-		item.setName("Special Item");
-		System.out.println(item);
+		Optional<Item> optItem= findItemById(2);
+		if(optItem.isPresent()) {
+			Item item= optItem.get();
+			item.setName("Special Item");
+			System.out.println(item);
+		}else {
+			System.out.println("Empty item");
+		}
 	}
-	private static Item findItemById(int id) {
+	private static Optional<Item> findItemById(int id) {
 		Item found =null;
 		Item []items=findAll();
 		for(Item item:items) {
@@ -26,7 +33,7 @@ public class Ex04 {
 				break;
 			}
 		}
-		return found;
+		return Optional.ofNullable(found);
 	}
 	private static Item[] findAll() {
 	    return new Item[] {
