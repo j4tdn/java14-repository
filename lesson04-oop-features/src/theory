@@ -79,7 +79,15 @@ Methods In ...
          
 + Phân biệt Interface và Abstract Class
    + <= JDK1.7
-   + >= JDK1.8
-+ Từ version 1.8, Interface có thể chưa hàm trừu tượng và hàm bình thường giống Abstract Class
-  thì việc đó có thừa không và mục đích để làm gì với static, default, private method trong interface          gói trong phạm vi của package
-           : lớp con bên ngoài package không thể thừa kế
+   ==> Interface: chỉ chứa hàm trừu tượng, 1 class có thể implements từ nhiều interface
+   ==> Abstract class: chứa hàm trừu tượng và hàm có body, 1 class chỉ có thể extends 1 abstract class
+   
+   + >= JDK1.8  
+   ==> Interface: chứa hàm trừu tượng và hàm có body với từ khóa default, static và private trong Java09        
+   ==> Abstract class: chứa hàm trừu tượng và hàm có body, 1 class chỉ có thể extends 1 abstract class   
+   
+ *** Từ version 1.8, Interface có thể chưa hàm trừu tượng và hàm bình thường giống Abstract Class
+  thì việc đó có thừa không và mục đích để làm gì với static, default, private method trong interface        
+  
+  Interface: List, forEach, sort, add,  remove, ... 
+  Implementation classes: ArrayList, LinkedList, Stack, Queue, Vector 

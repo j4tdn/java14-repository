@@ -1,0 +1,52 @@
+Exception là gì?
+-Là events xảy ra trong quá trình thực thi chương trình 
+, khi bị exception thì chương trình sẽ dừng lại ngay lập tức,
+không thực thi những đoạn mã code phía sau
+ 
+- Trong Java, khi bị exception thì Java sẽ quăng ra thông tin 
+exception gì và các loại exception đều kế thừa từ class Exception
+và những thông tin bao gồm:
+   + Thông tin lỗi, hình thức lỗi
+   + Trạng thái của chương trình khi xảy ra lỗi..
+   + Exception#printStackTrace
+ - Exception objects can be thrown and caught
+ 
+Exception- Xử lý ngoại lệ
+Mục đích: Chương trình có thể tiếp tục thực thi khi xảy ra ngoại lệ
+Cách 1: Tiền xử lý(validate) để không xảy ra ngoại lệ
+Cách 2: Sử dụng khối try catch để bắt ngoại lệ 
+Cách 3: Sử dụng throw, thows để ném ngoại lệ
+
+- Lỗi ngoại lệ-Exception
+    + Compile-Exception>>Checked Exception-IOException
+    + Runtime-Exception>>Unchecked Exception-ArithmeticException 
+===================================
+--> RuntimeException
+NumberFormatException
+ArithmeticException
+NullPointerException
+ArrayIndexOutOfBoundException
+
+==> Xảy ra tại: RUNTIME
+==> Không phải luôn luôn bị lỗi, phụ thuộc input người dùng
+==> Yêu cầu, bắt buộc xử lý lỗi lúc compile hay không: KHÔNG
+
+
+
+--> CompileException
+IOException
+
+1. Có bao nhiêu loại exception
+2. Phân biệt các loại exception
++ Runtime(Unchecked)-Exception: Không bắt buộc phải xử lý lỗi tại compile
++ Compile(Checked)-Exception: Bắt buộc phải xử lý lỗi tại compile
+
+3. Cách xử lý exception
++ Try/Catch
++ Throw/Throws
++ Validation
+
+4. Finally là gì và khi nào sử dụng
+
+5. Phân biệt final và finally    
+    
