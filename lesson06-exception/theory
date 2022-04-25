@@ -1,0 +1,28 @@
+--> RuntimeException
+NumberFormatException
+ArithmeticException
+NullPointerException
+ArrayIndexOutOfBoundException
+
+==> Xảy ra tại: RUNTIME
+==> Không phải luôn luôn bị lỗi, phụ thuộc input người dùng
+==> Yêu cầu, bắt buộc xử lý lỗi lúc compile hay không: KHÔNG
+
+
+
+--> CompileException
+IOException
+
+1. Có bao nhiêu loại exception
+2. Phân biệt các loại exception
++ Runtime(Unchecked)-Exception: Không bắt buộc phải xử lý lỗi tại compile
++ Compile(Checked)-Exception: Bắt buộc phải xử lý lỗi tại compile
+
+3. Cách xử lý exception
++ Try/Catch
++ Throw/Throws
++ Validation
+
+4. Finally là gì và khi nào sử dụng
+
+5. Phân biệt final và finally
