@@ -11,6 +11,10 @@ public class DatetimeUtils {
 	private DatetimeUtils() {
 
 	}
+	public static Date stringToDate(String dateaAsString, String pattern) {
+		DateFormat df = new SimpleDateFormat(pattern);
+		return df.parse(dateaAsString);
+	}
 	public static void print(String text,String pattern, Calendar calendar) {
 		print(text,pattern, calendar.getTime());
 	}
