@@ -5,7 +5,7 @@ import java.util.Locale;
 
 import common.WeekDay;
 
-import static utils.DateTiemUtils.*;
+import static utils.DateTimeUtils.*;
 
 public class Ex03FirstDayOfWeek {
 	private static String pattern ="dd/MM/yyyy";

@@ -3,7 +3,7 @@ package datetime;
 import java.security.Principal;
 import java.util.Calendar;
 
-import utils.DateTiemUtils;
+import utils.DateTimeUtils;
 
 public class Ex04PrintALLCurrentWeekDays {
 	
@@ -25,11 +25,11 @@ public class Ex04PrintALLCurrentWeekDays {
 		int dayOfWeek=c.get(Calendar.DAY_OF_WEEK);
 		int fdowAswd=c.getFirstDayOfWeek();
 		fdow.add(Calendar.DAY_OF_MONTH, fdowAswd-dayOfWeek);
-		DateTiemUtils.print("fdocw", "dd/MM/yyyy", fdow);
+		DateTimeUtils.print("fdocw", "dd/MM/yyyy", fdow);
 		
 		for(int  i=1;i<=6;i++) {
 			fdow.add(Calendar.DAY_OF_MONTH, 1);
-			DateTiemUtils.print("fdocw", "dd/MM/yyyy", fdow);
+			DateTimeUtils.print("fdocw", "dd/MM/yyyy", fdow);
 		}
 		
 		
