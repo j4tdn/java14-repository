@@ -1,5 +1,5 @@
 package common;
 
-public enum Weekday {
+public enum WeekDay {
 	Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
 }
