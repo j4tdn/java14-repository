@@ -17,7 +17,7 @@ public class Ex05SundayCounter {
 	
 	private static int countAmountOfSundays(Calendar c) {
 		int firstDayOfMonth = 1;
-		int lastDayOfMonth = c.getActualMaximum(Calendar.DAY_OF_MONTH);
+		int lastDayOfMonth = c.getActualMaximum(Calendar.DAY_OF_MONTH); // ngày cuối cùng trong tháng
 		
 		Calendar startDate = setTime(c, firstDayOfMonth); 
 		Calendar endDate = setTime(c, lastDayOfMonth); 

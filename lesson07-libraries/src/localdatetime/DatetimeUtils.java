@@ -1,4 +1,4 @@
-package utils;
+package localdatetime;
 
 import java.text.DateFormat;
 import java.text.ParseException;
@@ -13,10 +13,10 @@ public class DatetimeUtils {
 	private DatetimeUtils() {
 		
 	}
-	//20.10.2020 26/03/2018
+	
 	public static Date stringToDate(String dateAsString, String pattern) throws ParseException {
 		DateFormat df = new SimpleDateFormat(pattern);
-		return df.parse(dateAsString); // convert string sang date 
+		return df.parse(dateAsString);
 	}
 	
 	public static Calendar stringToCalendar(String dateAsString, String pattern) throws ParseException {
@@ -25,17 +25,15 @@ public class DatetimeUtils {
 	
 	public static String dateToString(Date date, String pattern) {
 		DateFormat df = new SimpleDateFormat(pattern);
-		return df.format(date); // convert date sang string
+		return df.format(date);
 	}
-	// string không thể chuyển trực tiếp sang calendar mà từ string ta chuyển sang date rồi mới chuyển sang calendar
+	
 	public static Calendar dateToCalendar(Date date) {
 		Calendar c = Calendar.getInstance();
 		c.setTime(date);
 		return c;
 	}
 	
-	// calendar không thể chuyển trực tiếp về string mà:
-    // calendar chuyển về date xong từ date chuyển về string
 	public static String calendarToString(Calendar c, String pattern) {
 		return dateToString(calendarToDate(c), pattern);
 	}
