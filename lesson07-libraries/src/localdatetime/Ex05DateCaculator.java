@@ -17,8 +17,8 @@ public class Ex05DateCaculator {
 
 		LocalDate date = LocalDate.of(2022, 5, 5);
 		// array holiday
-		LocalDate[] dates = { LocalDate.of(2022, 9, 1), LocalDate.of(2022, 9, 2), LocalDate.of(2022, 9, 23) };
-
+		LocalDate[] dates = {LocalDate.of(2022, 9, 1), LocalDate.of(2022, 9, 2), LocalDate.of(2022, 9, 23) };
+		
 		int count = 0;
 		System.out.println("date: " + date.getDayOfWeek());
 		while (count < 110) {
@@ -26,16 +26,16 @@ public class Ex05DateCaculator {
 				date = date.plusDays(1);
 				continue;
 			}
-			System.out.println("date : " + date);
 			date = date.plusDays(1);
 			count++;
+			System.out.println("date : " + date);
 		}
 
 	}
 
 	private static boolean checkNationalDay(LocalDate date, LocalDate[] dates) {
 		for (LocalDate date2 : dates) {
-			return date.equals(date2);
+			return date.getDayOfMonth() == date2.getDayOfMonth();
 		}
 		return false;
 	}
