@@ -5,7 +5,7 @@ public class StringUtils {
 
 	}
 
-	public static void hash(String text, String object) {
+	public static void hash(String text, Object object) {
 		System.out.println(text + "==>" + System.identityHashCode(object));
 	}
 }
