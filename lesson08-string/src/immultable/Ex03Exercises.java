@@ -5,7 +5,9 @@ public class Ex03Exercises {
 		/*
 		 * Tính chiều dài của chuỗi s
 			• Nối chuỗi s1 vào chuỗi s
+			+ , concat
 			• Lấy một ký tự tại vị trí index(3) trong chuỗi s
+			charAt(index)
 			• Duyệt từng phần tử trong chuỗi
 			• Tìm vị trí – chỉ số xuất hiện đầu tiên, cuối cùng của kí tự “a” trong chuỗi s indexOf or lastIndexOf
 		 */
