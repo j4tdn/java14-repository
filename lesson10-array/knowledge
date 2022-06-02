@@ -1,0 +1,6 @@
+Lambda expression is a shorten way to create/initial an object for Functional Interface
+instead of new Interface and override abstract method
+Syntax
+(parameters) -> {
+
+} ==> snippet code to override abstract method from Functional Interface
