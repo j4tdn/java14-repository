@@ -1,0 +1,26 @@
+1. Kể tên những cấu trúc dữ liệu mà bạn biết trong collections
+
+2. Phân biệt ArrayList và LinkedList
+ . Cho ví dụ và khi nào sử dụng cái nào
+ 
+3. Phân biệt List và Set
+
+4. Phân biệt HashSet và HashMap
+
+5. Phân biệt HashSet, TreeSet, LinkedHashSet
+
+6. Cơ chế để loại bỏ các phần tử trùng nhau trong Set
+ . #hashcode, equals
+
+7. Cơ chế khi remove 1 phần tử trong list
+.  #equals
+
+8. Tạo ra một cấu trúc dữ liệu tương tự List, Set được không?
+==> Generic Type và cấu trúc dữ liệu + thuật toán để tự build ra
+==> Tương tự CustomList
+
+9. Phân biệt Generic Type and WillCard
+
+10. Phân biệt extends và super trong generic definition
+
+11. Độ phức tạp khi mình add, remove, get, set một phần tử trong list
