@@ -6,7 +6,12 @@ public class Apple {
 	private double weight;
 	private String country;
 
-	public Apple() {
+	public Apple(int id) {
+		this.id = id;
+	}
+	
+	public Apple(String country) {
+		this.country = country;
 	}
 
 	public Apple(int id, String country) {
