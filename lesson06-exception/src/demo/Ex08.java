@@ -41,6 +41,7 @@ public class Ex08 {
 		} catch (ArithmeticException | IOException e) {
 			// invalid
 			e.printStackTrace();
+			
 		} finally {
 			// always immediately execute after try/[catch] 
 			// save and close file
