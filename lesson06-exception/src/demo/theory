@@ -1,3 +1,18 @@
+Các loại lỗi chính thường gặp
++Lỗi biên dịch -compile time: bị tại thời điểm compile bắt buộc phải fix xong ms chạy đc 
++Lỗi thực thi -runtime time (lỗi logic): code vẫn chạy được nhưng mà cái logic bị sai
++exception: .xảy ra trong quá trình thực thi chương trình, yêu cầu xử lý lỗi tại compile hoặc runtime tùy loại lỗi
+.chương trình dừng lại ngay lập tức, toàn bộ phần mã chương trình phía sau ko thực hiện (crash)
+.nguyên nhân
+   khi thực hiện xử lý tính toán, một biểu thức, phương thức có vấn đề sau khi thực hiện
+   => sinh ra một ngoại lệ (exception) trên console và dừng chương trình
+       .nhập vào số nguyên chuỗi
+       .phép toán chia số nguyên cho 0
+       .vượt quá kích thước mảng
+       .khởi tạo giá trị cho đối tượng chưa tồn tại
+       .tạo mới file
+       .mở hidden files trong hệ thống
+---------------------------------------------
 Exception là gì?
 -Là events xảy ra trong quá trình thực thi chương trình 
 , khi bị exception thì chương trình sẽ dừng lại ngay lập tức,

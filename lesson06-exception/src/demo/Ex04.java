@@ -10,7 +10,6 @@ import bean.Item;
 public class Ex04 {
 	public static void main(String[] args) {
 		Optional<Item> opItem = findItemById(8); // exception3
-
 		if (opItem.isPresent()) {
 			Item item = opItem.get();
 			System.out.println("Current Item: " + item);

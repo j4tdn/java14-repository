@@ -24,8 +24,8 @@ public class Ex03Exercises {
 		 
 		 Thay thế chuỗi s1 bằng chuỗi s2 trong chuỗi s
 		 Loại bỏ các khoảng trắng thừa của chuỗi s3
-		 Tạo chuỗi con s4 từ chuỗi s bắt đầu từ vị trí số 2
-		 Xác định chuỗi s2 có tồn tại trong chuỗi s1 hay không  ==> contains
+		
+		 
 		 */
 		
 		String s2 = "hello baba";
@@ -36,6 +36,10 @@ public class Ex03Exercises {
 		System.out.println("s2: " + s2);
 		
 		String s3 = "   welcome   to    our  class    ";
+		/*
+		 * hàm trim() và strip() giúp cắt khoảng trắng hai đầu của string 
+		 * chúng khác version nhưng công dụng là như nhau
+		 */
 		System.out.println("trim|" + s3.trim() + "|");
 		System.out.println("strip|" + s3.strip() + "|");
 		System.out.println("strip Leading|" + s3.stripLeading() + "|");
@@ -43,9 +47,10 @@ public class Ex03Exercises {
 		
 		s3 = s3.trim().replaceAll("\\s+", " ");
 		System.out.println("s3: " + s3);
-		
+		// Tạo chuỗi con s4 từ chuỗi s bắt đầu từ vị trí số 2
 		System.out.println("sub 2-5: " + s3.substring(2, 5));
 		
+		// Xác định chuỗi s2 có tồn tại trong chuỗi s1 hay không  ==> contains
 		System.out.println("contains: " + s3.contains("zy"));
 	}
 }
