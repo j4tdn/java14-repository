@@ -1,0 +1,18 @@
+file - structure
+ + create file
+ + create folder
+ + copy/upload file
+ + filter file
+ 
+ 
+ file - content
+  + text
+ --> FilerWriter, BufferWrite
+ --> FilerReader, BufferReader
+ --> Files.write, Files.read
+ 
+ + serializable
+ --> ObjectStream --> Input/Output
+ --> T implements Serializable
+  --> serialUID
+ transient --> not save
