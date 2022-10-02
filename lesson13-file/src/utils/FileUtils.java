@@ -10,6 +10,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
@@ -24,6 +25,8 @@ public class FileUtils {
 	private FileUtils() {
 
 	}
+
+	private static Random rd = new Random();
 
 	@SuppressWarnings("unchecked")
 	public static <T> List<T> safeReadObject(File file) {
@@ -108,6 +111,22 @@ public class FileUtils {
 		}
 	}
 
+	public static File createRandomFiles(String dirPath, int nof, String ... extensions) {
+		File dir = createNewDir(dirPath);
+		
+		for(int i = 0; i < nof ; i++) {
+			String ext = extensions[rd.nextInt(extensions.length)];
+			String fileName = "f" + System.currentTimeMillis() + rd.nextInt(100) + "e" + "." + ext;
+			File file = creatNewFile(dir, fileName);
+			System.out.println(file.isFile() ? "File" + file.getName() + "iss created ..." : "Cannot create file" + file.getName());
+		}
+		return dir;
+	}
+
+	public static File creatNewFile(File parent, String child) {
+		return createNewFile(parent.getAbsolutePath() + File.separator + child);
+	}
+
 	public static File createNewFile(String pathName) {
 		File file = new File(pathName);
 		File parent = file.getParentFile();
@@ -142,6 +161,19 @@ public class FileUtils {
 
 	public static Path createNewDirAsPath(String pathName) {
 		return createNewDir(pathName).toPath();
+	}
+
+	public static Path copy(String sourcePathName, String targetPathName) {
+		Path source = Paths.get(sourcePathName);
+		Path target = createNewDirAsPath(targetPathName);
+
+		Path targetPath = null;
+		try {
+			Files.copy(source, target.resolve(rename(source.getFileName())));
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return targetPath;
 	}
 
 	public static Path rename(Path fileNameAsPath) {

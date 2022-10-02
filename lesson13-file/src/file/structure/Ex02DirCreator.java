@@ -4,11 +4,14 @@ import java.io.File;
 
 public class Ex02DirCreator {
 	public static void main(String[] args) {
-		File dir = new File("template/springio");
+		File dir = new File("structure1\\hihi.txt");
 		if(!dir.exists()) {
-			dir.mkdirs();
+			boolean isCreated = dir.mkdirs();
+			System.out.println("is Created: " + isCreated);
+		}else {
+			System.out.println("Dir " + dir.getName() + " is existed !!!");
 		}
-		System.out.println("Finnish!!!!");
+		System.out.println("Finnish!!!");
 	}
 	
 }
