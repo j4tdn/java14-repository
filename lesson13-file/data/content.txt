@@ -1,0 +1,10 @@
+Thông tin khách hàng 14.08
+==========================
+Nguyen Anh, 0852 501 009, Hoa Khanh
+
+Van Nam, 0932 487 234, Son Tra
+
+Hoai Phuong, 0342 643 134, Cam le
+
+hi ae, 123, Cao Bang
+

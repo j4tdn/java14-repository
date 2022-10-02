@@ -13,7 +13,6 @@ public class Ex01MutableVsImmutable {
 		
 		i = i.concat(" Layout");
 		StringUtils.hash("i", i);
-		
 		System.out.println("==================");
 		
 		// StringBuilder sb = new StringBuilder("Builder");

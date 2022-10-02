@@ -8,7 +8,7 @@ public class Ex01External {
     	//public:  using in it's own class add everywhere
     	//private: using in it's own class - internal
     	//static: Method is static >> That can call directly via it's own ClassName
-    	Ex01TestMainMethod.anothermain();
+    	//Ex01TestMainMethod.anothermain();
     	// Temporary: public | private static 
 	}
 }
