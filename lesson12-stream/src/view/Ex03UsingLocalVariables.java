@@ -10,7 +10,7 @@ public class Ex03UsingLocalVariables {
 	}
 	public static Runnable run (int time) {
 		//outer scope must be final,(implicitly)
-		String  running ="running 5km";
+		final String  running ="running 5km";
 		
 		//require: 
 		return ()->{
