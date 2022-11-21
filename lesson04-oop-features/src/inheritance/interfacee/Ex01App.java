@@ -20,7 +20,7 @@ public class Ex01App {
 		parent.draw();
 
 		// how to construct an instance of interface
-		// option 1 : new interface derectly and use anonymous class
+		// option 1 : new interface directly and use anonymous class
 		// option 2 : create child class implements from interface
 		// and then use interface = new child class
 	}

@@ -1,4 +1,4 @@
-package sorting.primitive;
+ package sorting.primitive;
 
 import utils.ArrayUtils;
 

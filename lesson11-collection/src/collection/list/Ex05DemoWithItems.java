@@ -5,13 +5,14 @@ import java.util.Comparator;
 import java.util.List;
 
 import bean.Item;
+import datamodel.DataModel;
 import utils.CollectionUtils;
 
 public class Ex05DemoWithItems {
 	public static void main(String[] args) {
 		// List --> override equals --> make sure remove, contain works correctly
 		// instead of using default equal method to compare address
-		List<Item> items = getItems();
+		List<Item> items = DataModel.getItems();
 		
 		System.out.println("size: " +items.size());
 		
@@ -41,15 +42,5 @@ public class Ex05DemoWithItems {
 		// Array: Fixed-Size, No need Add, Remove
 		// List: Dynamic-Size, Need Add, Remove
 
-	}
-
-	private static List<Item> getItems() {
-		List<Item> items = new ArrayList<>();
-		items.add(new Item(1, 101, "Item 1", 220d));
-		items.add(new Item(2, 101, "Item 2", 180d));
-		items.add(new Item(3, 102, "Item 3", 260d));
-		items.add(new Item(4, 102, "Item 4", 120d));
-		items.add(new Item(5, 104, "Item 5", 80d));
-		return items;
 	}
 }
