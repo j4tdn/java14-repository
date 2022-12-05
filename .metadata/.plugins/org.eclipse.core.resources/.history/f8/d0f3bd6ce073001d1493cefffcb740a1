@@ -1,0 +1,22 @@
+package service;
+
+import java.util.List;
+
+import dao.ItemGroupDAO;
+import dao.JdbcItemGroupDAO;
+import persistence.ItemGroup;
+
+public class ItemGroupServiceImpl implements ItemGroupService{
+
+	private ItemGroupDAO itemGroupDAO;
+	
+	public ItemGroupServiceImpl() {
+		itemGroupDAO = new JdbcItemGroupDAO();
+	}
+	
+	@Override
+	public List<ItemGroup> getAll() {
+		return itemGroupDAO.getAll();
+	}
+	
+}

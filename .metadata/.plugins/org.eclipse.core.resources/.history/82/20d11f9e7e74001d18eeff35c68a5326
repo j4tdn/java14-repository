@@ -1,0 +1,11 @@
+package dao;
+
+import java.util.List;
+
+import persistence.ItemGroup;
+
+public interface ItemGroupDAO {
+	// access default in interface is public abstract
+	List<ItemGroup> getAll();
+	ItemGroup getItemById(int id);
+}

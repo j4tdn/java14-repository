@@ -1,0 +1,33 @@
+package connection;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+import com.mysql.cj.jdbc.Driver;
+
+public class DbConnection {
+	private static Connection connection = null;
+	
+	public static void main(String[] args) {
+		System.out.println("---->" + getConnection());
+	}
+	
+	public static Connection getConnection() {
+		if(connection == null) {
+			// connect database
+			Driver.class.getName();
+			try {
+				Class.forName("com.mysql.cj.jdbc.Driver");
+				DriverManager.getConnection(
+						"jdbc:mysql://localhost:3306/java15_shopping",
+						"root",
+						"10042001"
+						);
+			} catch (ClassNotFoundException | SQLException e) {
+				e.printStackTrace();
+			} 
+		}
+		return connection;
+	}
+}

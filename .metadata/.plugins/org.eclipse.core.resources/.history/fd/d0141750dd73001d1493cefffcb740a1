@@ -1,0 +1,27 @@
+package dao;
+
+import java.sql.Connection;
+import java.sql.Statement;
+import java.util.List;
+
+import connection.DbConnection;
+import persistence.ItemGroup;
+
+public class JdbcItemGroupDAO implements ItemGroupDAO{
+
+	private final Connection conn;
+	private Statement st; // wrapper wrap sql --> run sql in dbms
+	
+	public JdbcItemGroupDAO() {
+		conn = DbConnection.getConnection();
+	}
+	
+	@Override
+	public List<ItemGroup> getAll() {
+		// B1: Write down a native query  --> database(true)
+		
+		// B2: SELECT --> executeQuery
+		return null;
+	}
+
+}
