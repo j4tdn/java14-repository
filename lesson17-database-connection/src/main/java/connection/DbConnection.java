@@ -5,15 +5,9 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.Properties;
 
-import com.mysql.cj.jdbc.Driver;
-
 public class DbConnection {
 	private static Connection connection = null;
-	
-//	public static void main(String[] args) {
-//		System.out.println("---->" + getConnection());
-//	}
-	
+
 	public static Connection getConnection() {
 		if(connection == null) {
 			

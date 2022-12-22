@@ -1,0 +1,23 @@
+package persistence.transformer;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import persistence.ItemGroupDto;
+
+public class ItemGroupTransformer {
+	private ItemGroupTransformer() {}
+	
+	
+	//Quần tây Nam-30,Quần jean Nam-100,Quần jean Nữ-80
+	public static ItemGroupDto transfrom(ResultSet rs) throws SQLException {
+		ItemGroupDto result = new ItemGroupDto(
+				rs.getInt("MaLH"),
+				rs.getString("TenLH"),
+				rs.getInt("SoLuong")
+				);
+		String itemsAsString = rs.getString("DanhSachMatHang");
+		
+		return result;
+	}
+}

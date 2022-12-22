@@ -1,0 +1,7 @@
+package persistence;
+
+public class ItemGroupRawData {
+	private Integer itemGroupId;
+	private String itemGroupName;
+	private Integer amountOfItems;
+}

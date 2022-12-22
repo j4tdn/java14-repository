@@ -1,0 +1,90 @@
+package service;
+
+import java.util.List;
+import java.util.Map;
+import java.util.Objects;
+import java.util.Optional;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
+
+import dao.ItemDAO;
+import dao.ItemGroupDAO;
+import dao.JdbcItemDAO;
+import dao.JdbcItemGroupDAO;
+import persistence.Item;
+import persistence.ItemGroup;
+
+public class ItemGroupServiceImpl implements ItemGroupService{
+
+	
+	private ItemGroupDAO itemGroupDAO; 
+	private ItemDAO itemDAO;
+	
+	public ItemGroupServiceImpl() {
+		itemGroupDAO = new JdbcItemGroupDAO();
+		itemDAO = new JdbcItemDAO();
+	}
+	
+	@Override
+	public List<ItemGroup> getAll(){
+		return itemGroupDAO.getAll();
+	}
+	
+	@Override
+	public List<ItemGroup> getItemGroupDetails() {
+		List<Item> items = itemDAO.getAll();
+		/*
+		 * items
+		 * idA1, nameA1, colorA1, itemGroupA
+		 * idA2, nameA2, colorA2, itemGroupA
+		 * 
+		 * idB1, nameB1, colorB1, itemGroupB
+		 * idB2, nameB2, colorB2, itemGroupB
+		 * 
+		 * 
+		 * idC1, nameC1, colorC1, itemGroupC
+		 * idC2, nameC2, colorC2, itemGroupC
+		 * 
+		 * ==> itemGroups
+		 * itemGroupA, List<Item>
+		 * itemGroupB, List<Item>
+		 */
+		
+		// Entry<Key, Value>
+		items.stream()
+			 .collect(Collectors.groupingBy(item -> item.getItemGroup())) // return map
+			 .entrySet() // return set<entry<K, V>>
+			 .stream()   // stream<entry>
+			 .map(ItemGroup::new)
+			 .collect(Collectors.toList());
+		
+		
+		
+		return null;
+	}
+	
+	@Override
+	public ItemGroup getItemById(int id) {
+		return itemGroupDAO.getItemById(id);
+	}
+	
+	@Override
+	public void saveOrUpdate(ItemGroup itemGroup) {
+		// avoid NullPointerException
+		if(Optional.ofNullable(itemGroupDAO.getItemById(itemGroup.getId())).isPresent()) {
+			System.out.println("ig is existed --> executing update ...");
+			itemGroupDAO.update(itemGroup);
+		} else {
+			System.out.println("ig is not exist --> executing save ...");
+			itemGroupDAO.save(itemGroup);
+		}
+		
+	}
+	
+	@Override
+	public List<ItemGroup> search(String name) {
+		Objects.requireNonNull(name, "ig name cannot be null");
+		return itemGroupDAO.search(name);
+	}
+	
+}

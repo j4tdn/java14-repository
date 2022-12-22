@@ -1,0 +1,6 @@
+package persistence;
+
+public class ItemDto {
+	private Integer id;
+	private String name;
+}

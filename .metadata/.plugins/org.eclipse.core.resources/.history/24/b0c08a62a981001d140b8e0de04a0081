@@ -1,0 +1,17 @@
+package dao;
+
+import java.sql.Connection;
+import java.sql.Statement;
+
+import persistence.Employee;
+
+public class JdbcEmployeeDao implements EmployeeDao{
+
+	private Connection connection;
+	private Statement statement;
+	private Prepare
+	
+	@Override
+	public void save(Employee employee) {
+	}
+}

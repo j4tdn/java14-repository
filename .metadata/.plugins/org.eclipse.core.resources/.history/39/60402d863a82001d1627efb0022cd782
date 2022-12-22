@@ -1,0 +1,12 @@
+package view;
+
+import service.EmployeeService;
+import service.EmployeeServiceImpl;
+
+public class EmployeeView {
+	// dependency
+	private static EmployeeService employeeService;
+	static {
+		employeeService = new EmployeeServiceImpl();
+	}
+}

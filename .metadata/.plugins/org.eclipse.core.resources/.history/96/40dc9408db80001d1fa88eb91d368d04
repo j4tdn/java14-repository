@@ -1,0 +1,9 @@
+package dao;
+
+import java.util.List;
+
+import persistence.Item;
+
+public interface ItemDAO {
+	List<Item> getItems(String itemGroupName);
+}

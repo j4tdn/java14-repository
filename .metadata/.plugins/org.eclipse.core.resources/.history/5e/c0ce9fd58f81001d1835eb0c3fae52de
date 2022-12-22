@@ -1,0 +1,7 @@
+package persistence;
+
+public class ItemGroupDto {
+	private Integer itemGroupId;
+	private String itemGroupName;
+	private Integer amountOfItems;
+}

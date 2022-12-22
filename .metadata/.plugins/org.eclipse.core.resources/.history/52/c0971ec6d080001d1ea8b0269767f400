@@ -1,0 +1,14 @@
+package dao;
+
+import java.util.List;
+
+import persistence.ItemGroup;
+
+public class JdbcItemDao implements ItemGroupDAO{
+
+	@Override
+	public List<ItemGroup> getAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+}

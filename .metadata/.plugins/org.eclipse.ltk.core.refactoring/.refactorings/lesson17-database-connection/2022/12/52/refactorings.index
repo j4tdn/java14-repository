@@ -1,0 +1,9 @@
+1671588088019	Rename type 'ItemDao'
+1671588102779	Rename type 'JdbcItemDao'
+1671668489398	Rename type 'ItemDAO'
+1671668501015	Rename type 'ItemGroupDAO'
+1671668511725	Rename type 'JdbcItemDAO'
+1671668524979	Rename type 'JdbcItemGroupDAO'
+1671669028277	Rename type 'ItemGroupDto'
+1671671185591	Rename type 'ItemGroupRawData'
+1671679762215	Delete element

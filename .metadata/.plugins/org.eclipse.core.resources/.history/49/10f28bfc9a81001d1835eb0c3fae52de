@@ -1,0 +1,28 @@
+package persistence.transformer;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.regex.Pattern;
+
+import persistence.ItemGroupDto;
+
+public class ItemGroupTransformer {
+	private ItemGroupTransformer() {}
+	
+	
+	//3-Quần tây Nam-30,4-Quần jean Nam-100,5-Quần jean Nữ-80
+	public static ItemGroupDto transfrom(ResultSet rs) throws SQLException {
+		ItemGroupDto result = new ItemGroupDto(
+				rs.getInt("MaLH"),
+				rs.getString("TenLH"),
+				rs.getInt("SoLuong")
+				);
+		String itemsAsString = rs.getString("DanhSachMatHang");
+		Pattern.compile(",")
+		       .splitAsStream(itemsAsString) // Stream<String>
+		       .map(Item::new) // constructor references
+		
+		
+		return result;
+	}
+}

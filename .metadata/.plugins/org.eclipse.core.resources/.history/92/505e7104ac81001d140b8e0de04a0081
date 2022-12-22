@@ -1,0 +1,23 @@
+package persistence;
+
+public class Title {
+	private Integer id;
+	private String name;
+	
+	
+	public Title() {
+	}
+
+
+	public Title(Integer id, String name) {
+		super();
+		this.id = id;
+		this.name = name;
+	}
+
+
+	@Override
+	public String toString() {
+		return "Title [id=" + id + ", name=" + name + "]";
+	}
+}

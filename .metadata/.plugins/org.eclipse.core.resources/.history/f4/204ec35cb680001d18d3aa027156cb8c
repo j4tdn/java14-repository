@@ -1,0 +1,7 @@
+persistence: những đối tượng liên quan đến việc mapping lưu trữ đối tượng trong java với sql
+
+--> SQL Injection --> URL/UI --> SQL(SQL clause)
+--> Tiêm/truyền 1 câu lệnh SQL --> để thực hiện một tác vụ nào đó
+
+VD: Đăng nhập:
+

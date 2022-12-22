@@ -1,0 +1,64 @@
+package persistence;
+
+import java.util.List;
+
+public class ItemGroupRawData {
+	
+	private Integer itemGroupId;
+	private String itemGroupName;
+	private Integer amountOfItems;
+	private List<Item> items;
+	
+	
+	public ItemGroupRawData() {
+	}
+
+
+	public ItemGroupRawData(Integer itemGroupId, String itemGroupName, Integer amountOfItems, List<Item> items) {
+		super();
+		this.itemGroupId = itemGroupId;
+		this.itemGroupName = itemGroupName;
+		this.amountOfItems = amountOfItems;
+		this.items = items;
+	}
+
+
+	public Integer getItemGroupId() {
+		return itemGroupId;
+	}
+
+
+	public void setItemGroupId(Integer itemGroupId) {
+		this.itemGroupId = itemGroupId;
+	}
+
+
+	public String getItemGroupName() {
+		return itemGroupName;
+	}
+
+
+	public void setItemGroupName(String itemGroupName) {
+		this.itemGroupName = itemGroupName;
+	}
+
+
+	public Integer getAmountOfItems() {
+		return amountOfItems;
+	}
+
+
+	public void setAmountOfItems(Integer amountOfItems) {
+		this.amountOfItems = amountOfItems;
+	}
+
+
+	public List<Item> getItems() {
+		return items;
+	}
+
+
+	public void setItems(List<Item> items) {
+		this.items = items;
+	}
+}

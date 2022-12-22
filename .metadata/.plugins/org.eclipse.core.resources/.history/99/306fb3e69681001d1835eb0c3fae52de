@@ -1,0 +1,18 @@
+package persistence.transformer;
+
+import java.sql.ResultSet;
+
+import persistence.ItemGroupDto;
+
+public class ItemGroupTransformer {
+	private ItemGroupTransformer() {}
+	
+	public static ItemGroupDto transfrom(ResultSet rs) {
+		ItemGroupDto result = new ItemGroupDto(
+				rs.getInt("MaLH"),
+				rs.getString("TenLH"),
+				rs.getInt("SoLuong")
+				);
+		
+	}
+}

@@ -1,0 +1,32 @@
+persistence: những đối tượng liên quan đến việc mapping lưu trữ đối tượng trong java với sql
+
+--> SQL Injection --> URL/UI --> SQL(SQL clause)
+--> Tiêm/truyền 1 câu lệnh SQL --> để thực hiện một tác vụ nào đó
+
+VD: Đăng nhập:
+		+ ipUsername = a
+			--> a' OR '1=1
+		+ ipPassword = b
+	--> SELECT * FROM user
+		 WHERE username = 'a' OR '1=1'
+		   AND password = 'b'
+		   
+Cause --> JDBC --> Statement --> parameter as String
+Fix   -->          PrepareStatement
+				   
++ OOP: 
+	--> HAS-A --> Item has an ItemGroup
+	VD: class Item {
+			int id;
+			ItemGroup ig;	
+		}
+	--> IS-A (cái ni lúc runtime có thể là cái kia)
+	VD: List is an ArrayList
+	    List is a LinkedList
+	    Shape is a Square
+	   
+ORM: Object Relational Mapping
+     CLASS --> TABLE
+	
+		
+	

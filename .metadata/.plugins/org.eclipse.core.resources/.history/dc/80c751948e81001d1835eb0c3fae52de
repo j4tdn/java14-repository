@@ -1,0 +1,23 @@
+package service;
+
+import java.util.List;
+import java.util.Objects;
+
+import dao.ItemDAO;
+import dao.JdbcItemDAO;
+import persistence.Item;
+
+public class ItemServiceImpl implements ItemService{
+	
+	private ItemDAO itemDAO;
+	
+	public ItemServiceImpl() {
+		itemDAO = new JdbcItemDAO();
+	}
+	
+	@Override
+	public List<Item> getItems(String itemGroupName) {
+		Objects.requireNonNull(itemGroupName, "itemGroupName cannot be null");
+		return itemDAO.getItems(itemGroupName);
+	}
+}
