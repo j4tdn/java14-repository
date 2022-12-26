@@ -81,6 +81,11 @@ public class ItemGroupServiceImpl implements ItemGroupService{
 	}
 	
 	@Override
+	public void save(List<ItemGroup> itemGroups) {
+		itemGroupDAO.save(itemGroups);
+	}
+	
+	@Override
 	public List<ItemGroup> search(String name) {
 		Objects.requireNonNull(name, "ig name cannot be null");
 		return itemGroupDAO.search(name);

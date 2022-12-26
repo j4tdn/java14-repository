@@ -16,8 +16,8 @@ public class EmployeeView {
 		// teo147test
 		//Employee employee = new Employee(147, "Teo 147", "teo147@edu.com", "0123456789", "On the road", "teo147test", new Title(2));
 		// na258test
-//		Employee employee = new Employee(258, "Na 147", "na258@edu.com", "0987654321", "On the street", "na258test", new Title(1));
-//		employeeService.save(employee);
+		// Employee employee = new Employee(258, "Na 147", "na258@edu.com", "0987654321", "On the street", "na258test", new Title(1));
+		// employeeService.save(employee);
 		Employee employee = employeeService.login("na258@edu.com", "na258test");
 		if (employee == null) {
 			System.out.println("--> Wrong username || password");

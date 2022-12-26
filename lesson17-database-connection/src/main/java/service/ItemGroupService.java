@@ -11,5 +11,7 @@ public interface ItemGroupService {
 	List<ItemGroup> getItemGroupDetails();
 	ItemGroup getItemById(int id);
 	void saveOrUpdate(ItemGroup itemGroup);
+	void save(List<ItemGroup> itemGroups);
 	List<ItemGroup> search(String name);
+	
 }

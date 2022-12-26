@@ -9,9 +9,11 @@
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
 			<item value="\r"/>
+			<item value="50k"/>
 		</list>
 		<list key="replacehistory">
 			<item value=""/>
+			<item value="10$"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">

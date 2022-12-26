@@ -6,6 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import connection.DbConnection;
@@ -122,6 +123,33 @@ public class JdbcItemGroupDao implements ItemGroupDao {
 
 	
 	@Override
+	public void save(List<ItemGroup> itemGroups) {
+		// update
+		String sql = "INSERT INTO LoaiHang(MaLH, TenLH)\n" 
+	               + "VALUES(?, ?)";
+		int batchCount = 0;
+		
+		try {
+			pst = conn.prepareStatement(sql);
+			for(ItemGroup itemGroup: itemGroups) {
+				// update
+				pst.setInt(1, itemGroup.getId());
+				pst.setString(2, itemGroup.getName());
+				pst.addBatch();
+				if(++batchCount % 100 == 0) {
+					pst.executeBatch();
+				}
+			}
+			int[] affectedRows =  pst.executeBatch();
+			System.out.println(">>> affectedRows >>> " + Arrays.toString(affectedRows));
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			SqlUtils.close(pst);
+		}
+	}
+	
+	@Override
 	public void update(ItemGroup itemGroup) {
 		String sql = ""
 				+ "UPDATE LoaiHang\n"
@@ -142,7 +170,7 @@ public class JdbcItemGroupDao implements ItemGroupDao {
 			SqlUtils.close(pst);
 		}
 	}
-	
+
 	@Override
 	public List<ItemGroup> search(String name) {
 		List<ItemGroup> results = new ArrayList<>();
